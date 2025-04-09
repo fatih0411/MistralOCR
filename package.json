@@ -1,0 +1,28 @@
+{
+  "name": "@fatih0411/mistral-ocr",
+  "version": "0.1.0",
+  "description": "PDF data extracting",
+  "type": "module",
+  "bin": {
+    "mistral-ocr": "./build/index.js"
+  },
+  "main": "build/index.js",
+  "files": [
+    "build"
+  ],
+  "publishConfig": { "access": "public" },
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "axios": "^1.8.4",
+    "form-data": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.8.3"
+  }
+}
